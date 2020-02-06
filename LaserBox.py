@@ -61,3 +61,5 @@ if __name__ == "__main__":
 
     with open("Square.svg", "w") as Boxfile:
         main()
+
+print("testing")
