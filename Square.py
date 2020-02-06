@@ -12,10 +12,10 @@ def main():
         "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n"
     )
 
-    # show the boundary
-    Boxfile.write(
-        "\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" stroke=\"black\" stroke-width=\"1\" fill=\"none\"/>\n"
-    )
+    # # show the boundary
+    # Boxfile.write(
+    #     "\t<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" stroke=\"black\" stroke-width=\"1\" fill=\"none\"/>\n"
+    # )
 
     ####################################################################################################
     # print the user instruction
@@ -61,5 +61,3 @@ if __name__ == "__main__":
 
     with open("Square.svg", "w") as Boxfile:
         main()
-
-print("testing")
