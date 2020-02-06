@@ -1,5 +1,5 @@
 ####################################################################################################
-# This program generate a square SVG pattern
+# This program generate a Box SVG pattern
 
 
 def main():
@@ -27,8 +27,8 @@ def main():
     while True:
         try:
             # get the user input
+            length = float(input('Enter the length of the Box: '))
             width = float(input('Enter the width of the Box: '))
-            length = float(input('Enter the width of the Box: '))
             height = float(input('Enter the height of the Box: '))
         except ValueError:
             print("Sorry, I didn't understand that. Please enter a number.")
