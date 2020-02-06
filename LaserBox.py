@@ -19,7 +19,7 @@ def main():
     print("Welcome to the Square generator!")
     print("The square needs to be at least 5\" in all dimensions.")
     print(
-        "Please follow the instruction to generate a Box shape. :)  Have Fun!")
+        "Please follow the instruction to generate a Box shape. :) Have Fun!")
     print("#########################################")
 
     ####################################################################################################
@@ -28,6 +28,7 @@ def main():
         try:
             # get the user input
             width = float(input('Enter the width of the Box: '))
+            length = float(input('Enter the width of the Box: '))
             height = float(input('Enter the height of the Box: '))
         except ValueError:
             print("Sorry, I didn't understand that. Please enter a number.")
@@ -35,7 +36,7 @@ def main():
         else:
             if width < 5 or height < 5:
                 print(
-                    "One or Both of the numbers was/were too small. Try again. (The square needs to be at least 5\" in all dimensions.)"
+                    "One or Both of the numbers was/were too small. Try again. (The box needs to be at least 5\" in all dimensions.)"
                 )
                 continue
             else:
@@ -51,10 +52,10 @@ def main():
     # close up the file
     Boxfile.write("</svg>")
 
-    print("File generated successfully! Check your root folder :)")
-
 
 if __name__ == "__main__":
 
-    with open("Square.svg", "w") as Boxfile:
+    with open("LaseBox.svg", "w") as Boxfile:
         main()
+
+    print("File generated successfully! Check your root folder :)")
