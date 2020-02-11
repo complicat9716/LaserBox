@@ -5,51 +5,73 @@ import math
 def main():
     ####################################################################################################
     # constant limits for later use
-    DIM_LIMIT = 2
+    DIM_LIMIT = 5
     THIK_LIMIT = 0.1
 
-    t = 1*4
-    l = 90*4
-    w = 30*4
-    h = 35*4
-    h3 = 30*4
-    h2 = 20*4
-    h1 = h - h2
+    # t = 1*4
+    # l = 90*4
+    # w = 30*4
+    # h = 35*4
+    # h3 = 30*4
+    # h2 = 20*4
+    # h1 = h - h2
 
-    # ####################################################################################################
-    # # print the user instruction
-    # print("Welcome to the Square generator!")
-    # print("Please follow the instruction to generate a Box shape. :) Have Fun!")
-    # print("#########################################")
-    # print("The card borad need to be at least 0.1\" in thickness.")
-    # print("The Box needs to be at least 2\" in all dimensions.")
-    # print("#########################################")
+    t = 0
+    l = 0
+    w = 0
+    h = 0
+    h3 = 0
+    h2 = 0
 
-    # ####################################################################################################
-    # # validate the user input
-    # while True:
-    #     try:
-    #         # get the user input
-    #         t = float(input('Enter the thickness of the card borad: '))
-    #         l = float(input('Enter the length of the Box: '))
-    #         w = float(input('Enter the width of the Box: '))
-    #         h = float(input('Enter the height of the Box: '))
-    #         h3 = float(input('Enter the front height of the Box: '))
-    #     except ValueError:
-    #         print(
-    #             "Sorry, The parameters seems not right. Please enter valid numbers."
-    #         )
-    #         continue
-    #     else:
-    #         if l < DIM_LIMIT or w < DIM_LIMIT or h < DIM_LIMIT or h3 < DIM_LIMIT or t < THIK_LIMIT:
-    #             print(
-    #                 "One or Both of the numbers was/were too small. Try again."
-    #             )
-    #             continue
-    #         else:
-    #             print("Input Successs!")
-    #             print("#########################################")
-    #             break
+    ####################################################################################################
+    # print the user instruction
+    print("Welcome to the Square generator!")
+    print("Please follow the instruction to generate a Box shape. :) Have Fun!")
+    print("#########################################")
+    print("The card borad need to be at least 0.1\" in thickness.")
+    print("The Box needs to be at least 2\" in all dimensions.")
+    print("#########################################")
+
+    ####################################################################################################
+    # validate the user input
+    while True:
+        try:
+            # get the user input
+            if t < THIK_LIMIT:
+                t = float(input('Enter the thickness of the card borad: '))
+
+            if l < DIM_LIMIT:
+                l = float(input('Enter the length of the Box: '))
+
+            if w < DIM_LIMIT:
+                w = float(input('Enter the width of the Box: '))
+
+            if h < DIM_LIMIT:
+                h = float(input('Enter the height of the Box: '))
+
+            if h3 > l or h3 < DIM_LIMIT:
+                h3 = float(input('Enter the top chamfer length of the Box: '))
+
+            if h2 > h or h2 < DIM_LIMIT:
+            h2 = float(input('Enter the front chamfer length of the Box: '))
+
+            h1 = h - h2
+        except ValueError:
+            print("Sorry, The parameters seems not right. Please enter valid numbers.")
+            continue
+        else:
+            if l < DIM_LIMIT or w < DIM_LIMIT or h < DIM_LIMIT or t < THIK_LIMIT or h3 < DIM_LIMIT or h2 < DIM_LIMIT:
+                print("At least one number was too small. Try again.")
+                print("#########################################")
+                continue
+            if h2 > h or h3 > l:
+                print("Chamfer too big. Try again.")
+                print("#########################################")
+                continue
+            else:
+                print("Input Successs!")
+                print("#########################################")
+                break
 
     ####################################################################################################
     # draw the box pattern
