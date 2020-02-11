@@ -11,10 +11,11 @@ def main():
     ####################################################################################################
     # print the user instruction
     print("Welcome to the Square generator!")
-    print("The card borad need to be at least 0.1\" in thickness.")
-    print("The Box needs to be at least 2\" in all dimensions.")
     print(
         "Please follow the instruction to generate a Box shape. :) Have Fun!")
+    print("#########################################")
+    print("The card borad need to be at least 0.1\" in thickness.")
+    print("The Box needs to be at least 2\" in all dimensions.")
     print("#########################################")
 
     ####################################################################################################
@@ -22,10 +23,10 @@ def main():
     while True:
         try:
             # get the user input
+            thickness = float(input('Enter the thickness of the card borad: '))
             length = float(input('Enter the length of the Box: '))
             width = float(input('Enter the width of the Box: '))
             height = float(input('Enter the height of the Box: '))
-            thickness = float(input('Enter the thickness of the card borad: '))
         except ValueError:
             print(
                 "Sorry, The parameters seems not right. Please enter valid numbers."
@@ -45,8 +46,13 @@ def main():
     ####################################################################################################
     # write an rectangle
     Boxfile.write(
-        "\t<rect x=\"calc(50%% - %f/2)\" y=\"calc(50%% - %f/2)\" width=\"%f\" height=\"%f\" stroke=\"black\" stroke-width=\"0.25\" fill=\"none\"/>\n"
+        "\t<rect x=\"calc(50%% - %f/2)\" y=\"calc(50%% - %f/2)\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n"
         % (width, height, width, height))
+
+    # draw the box pattern
+    Boxfile.write(
+        "<polyline points= \"100,100 150,25 150,75 200,0\" fill=\"none\" stroke=\"black\" />\n"
+    )
 
 
 ####################################################################################################
