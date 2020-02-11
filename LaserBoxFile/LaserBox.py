@@ -1,6 +1,6 @@
 ####################################################################################################
 # This program generate a Box SVG pattern
-
+import math
 
 def main():
     ####################################################################################################
@@ -52,12 +52,6 @@ def main():
     #             break
 
     ####################################################################################################
-    # write an rectangle
-    # Boxfile.write("\t<rect x=\"-%f/2\" y=\"-%f/2\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (w, h, w, h))
-
-    # # draw a lighting pattern
-    # Boxfile.write("\t<polyline points= \"100,100 150,25 150,75 200,0\" fill=\"none\" stroke=\"black\" />\n")
-
     # draw the box pattern
     points_List = []
     poly_points = ""
@@ -99,12 +93,37 @@ def main():
         else:
             poly_points = poly_points + points_List[i]
 
-    print(poly_points)
+
+    # draw dash lines
 
     Boxfile.write("\t<polyline points= \"%s\" fill=\"none\" stroke=\"black\" />\n" %(poly_points))
 
-    Boxfile.write("\t<line x1=\"0\" y1=\"3\" x2=\"30\" y2=\"3\" stroke=\"black\" stroke-dasharray=\"4\" />\n")
 
+    dash_list = []
+
+    dash_list.append((-w/2, -l/2 - 2*t - h - 2*t, w/2, -l/2 - 2*t - h - 2*t))
+    dash_list.append((-w/2, -l/2 - 2*t - h, w/2, -l/2 - 2*t - h))
+    dash_list.append((-w/2, -l/2 - 2*t, w/2, -l/2 - 2*t))
+
+    dash_list.append((-w/2, l/2 + 2*t + h + 2*t, w/2, l/2 + 2*t + h + 2*t))
+    dash_list.append((-w/2, l/2 + 2*t + h, w/2, l/2 + 2*t + h))
+    dash_list.append((-w/2, l/2 + 2*t, w/2, l/2 + 2*t))
+
+    dash_list.append((-w/2, -l/2, -w/2 - h, -l/2))
+    dash_list.append((-w/2, l/2, -w/2 - h1, l/2))
+
+    dash_list.append((w/2, -l/2 - t, w/2 + h, -l/2 - t))
+    dash_list.append((w/2, l/2 + t, w/2 + h1, l/2 + t))
+
+    dash_list.append((-w/2, -l/2, -w/2, l/2))
+    dash_list.append((w/2, -l/2 - t, w/2, l/2 + t))
+
+    for dashline_loc in dash_list:
+        Boxfile.write("\t<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"black\" stroke-dasharray=\"11\" />\n" % (dashline_loc))
+
+    # write the lockers
+    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, -l/2, w/3, t))
+    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, l/2 - t, w/3, t))
 
 
 ####################################################################################################
