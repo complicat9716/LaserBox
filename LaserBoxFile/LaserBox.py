@@ -1,6 +1,5 @@
 ####################################################################################################
 # This program generate a Box SVG pattern
-import math
 
 def main():
     ####################################################################################################
@@ -53,15 +52,17 @@ def main():
                 h3 = float(input('Enter the top chamfer length of the Box: '))
 
             if h2 > h or h2 < DIM_LIMIT:
-            h2 = float(input('Enter the front chamfer length of the Box: '))
+                h2 = float(input('Enter the front chamfer length of the Box: '))
 
             h1 = h - h2
+
         except ValueError:
             print("Sorry, The parameters seems not right. Please enter valid numbers.")
             continue
+
         else:
             if l < DIM_LIMIT or w < DIM_LIMIT or h < DIM_LIMIT or t < THIK_LIMIT or h3 < DIM_LIMIT or h2 < DIM_LIMIT:
-                print("At least one number was too small. Try again.")
+                print("The following numbers were too small. Try again.")
                 print("#########################################")
                 continue
             if h2 > h or h3 > l:
@@ -115,12 +116,11 @@ def main():
         else:
             poly_points = poly_points + points_List[i]
 
-
-    # draw dash lines
-
     Boxfile.write("\t<polyline points= \"%s\" fill=\"none\" stroke=\"black\" />\n" %(poly_points))
 
 
+    ####################################################################################################
+    # draw dash lines
     dash_list = []
 
     dash_list.append((-w/2, -l/2 - 2*t - h - 2*t, w/2, -l/2 - 2*t - h - 2*t))
@@ -143,9 +143,11 @@ def main():
     for dashline_loc in dash_list:
         Boxfile.write("\t<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"black\" stroke-dasharray=\"11\" />\n" % (dashline_loc))
 
-    # write the lockers
+    ####################################################################################################
+    # draw the lockers
     Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, -l/2, w/3, t))
     Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, l/2 - t, w/3, t))
+
 
 
 ####################################################################################################
