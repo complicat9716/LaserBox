@@ -116,7 +116,7 @@ def main():
         else:
             poly_points = poly_points + points_List[i]
 
-    Boxfile.write("\t<polyline points= \"%s\" fill=\"none\" stroke=\"black\" />\n" %(poly_points))
+    Boxfile.write("\t<polyline points= \"%s\" fill=\"none\" stroke=\"black\" stroke-width=\"0.2\"/>\n" %(poly_points))
 
 
     ####################################################################################################
@@ -141,22 +141,22 @@ def main():
     dash_list.append((w/2, -l/2 - t, w/2, l/2 + t))
 
     for dashline_loc in dash_list:
-        Boxfile.write("\t<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"black\" stroke-dasharray=\"11\" />\n" % (dashline_loc))
+        Boxfile.write("\t<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"black\" stroke-dasharray=\"11\" stroke-width=\"0.2\"/>\n" % (dashline_loc))
 
 
     ####################################################################################################
     # draw the lockers
-    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, -l/2, w/3, t))
-    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\"/>\n" % (-(1/3*w)/2, l/2 - t, w/3, t))
+    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\" stroke-width=\"0.2\"/>\n" % (-(1/3*w)/2, -l/2, w/3, t))
+    Boxfile.write("\t<rect x=\"%f\" y=\"%f\" width=\"%f\" height=\"%f\" stroke=\"black\" fill=\"none\" stroke-width=\"0.2\"/>\n" % (-(1/3*w)/2, l/2 - t, w/3, t))
 
 
     ####################################################################################################
     # draw the text (take out the text location)
     UserText = "Digital Manufacturing"
-    Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\" style=\"fill: none; stroke: blue;  font-size: 11px;\" text-anchor=\"middle\">%s</text>\n" % (-l/2-7*t, UserText))
+    Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"  stroke-width=\"0.2\" style=\"fill: none; stroke: blue;  font-size: 11px;\" text-anchor=\"middle\">%s</text>\n" % (-l/2-7*t, UserText))
 
     ####################################################################################################
-    # draw the logo (draw the logo based on the txt location)
+    # draw the logo (draw the logo based on the txt location)(How to draw the image (logo))
     if w > h1:
         logo_size = 1/2*h1
     else:
@@ -164,21 +164,26 @@ def main():
     
     logo_xloc = -1/2*logo_size
 
-    url = "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Columbia_Engineering_logo.svg/1200px-Columbia_Engineering_logo.svg.png"
-    Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc,-(l/2 + 2*t + 4/5*h1), logo_size, logo_size))
+    # url = "Columbia_Engineering_logo.svg"
+    # Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc,-(l/2 + 2*t + 4/5*h1), logo_size, logo_size))
+    Boxfile.write("\t<image xlink:href=\"Columbia_Engineering_logo.svg\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (logo_xloc,-(l/2 + 2*t + 4/5*h1), logo_size, logo_size))
+
+
+    ####################################################################################################
+    # how to draw the curves
 
 
 ####################################################################################################
 # set the program as main and write file
 if __name__ == "__main__":
 
-    with open("LaseBox_0.svg", "w") as Boxfile:
+    with open("LaserBox_0.svg", "w") as Boxfile:
 
         # write the svg definition
         Boxfile.write("<svg viewBox=\"-500 -500 1000 1000\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n")
 
-        # show the boundary
-        Boxfile.write("\t<rect x=\"-500\" y=\"-500\" width=\"100%\" height=\"100%\" stroke=\"black\" stroke-width=\"1\" fill=\"none\"/>\n")
+        # # show the boundary
+        # Boxfile.write("\t<rect x=\"-500\" y=\"-500\" width=\"100%\" height=\"100%\" stroke=\"black\" stroke-width=\"1\" fill=\"none\"/>\n")
 
         # main program
         main()
