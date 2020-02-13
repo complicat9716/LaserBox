@@ -1,59 +1,165 @@
 <svg viewBox="-1000 -1000 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<polyline points= "-600.0,-670.0 -230.0,-670.0 -230.0,-360.0 -200.0,-300.0 -230.0,-360.0 -230.0,-760.0 -200.0,-820.0 -200.0,-1190.0 -66.66666666666669,-1190.0 -66.66666666666669,-1220.0 66.66666666666666,-1220.0 66.66666666666666,-1190.0 200.0,-1190.0 200.0,-820.0 230.0,-760.0 230.0,-360.0 200.0,-330.0 230.0,-360.0 230.0,-700.0 600.0,-700.0 600.0,100.0 550.0,330.0 550.0,700.0 230.0,700.0 230.0,360.0 200.0,330.0 230.0,360.0 230.0,710.0 200.0,770.0 200.0,1090.0 66.66666666666666,1090.0 66.66666666666666,1120.0 -66.66666666666666,1120.0 -66.66666666666666,1090.0 -200.0,1090.0 -200.0,770.0 -230.0,710.0 -230.0,360.0 -200.0,300.0 -230.0,360.0 -230.0,670.0 -550.0,670.0 -550.0,300.0 -600.0,100.0 -600.0,-670.0" fill="none" stroke="black"/>
-	<line x1="-200.0" y1="-820.0" x2="200.0" y2="-820.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="-760.0" x2="200.0" y2="-760.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="-360.0" x2="200.0" y2="-360.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="770.0" x2="200.0" y2="770.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="710.0" x2="200.0" y2="710.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="360.0" x2="200.0" y2="360.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="-300.0" x2="-600.0" y2="-300.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="300.0" x2="-550.0" y2="300.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="200.0" y1="-330.0" x2="600.0" y2="-330.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="200.0" y1="330.0" x2="550.0" y2="330.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="-200.0" y1="-300.0" x2="-200.0" y2="300.0" stroke="black" stroke-dasharray="11"/>
-	<line x1="200.0" y1="-330.0" x2="200.0" y2="330.0" stroke="black" stroke-dasharray="11"/>
-	<rect x="-66.666667" y="-300.000000" width="133.333333" height="30.000000" stroke="black" fill="none"/>
-	<rect x="-66.666667" y="270.000000" width="133.333333" height="30.000000" stroke="black" fill="none"/>
-	<text x="0" y="-390.000000" transform="rotate(180, 0, 0)"   style="fill: none; stroke: black;  font-size: 30.000000px;" text-anchor="middle">Digital Manufacturing</text>
-	<image href="logo.svg" x="-87.500000" y="-595.000000" transform="rotate(180 0 0)" height="175.000000" width="175.000000"/>
-	<circle cx="430.000000" cy="-100.000000" r="100.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-100.000000" r="50.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="280.000000" cy="-100.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="255.000000" cy="-100.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="280.000000" cy="-125.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="280.000000" cy="-75.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-150.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="305.000000" cy="-150.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-175.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-125.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-50.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="305.000000" cy="-50.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-75.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="330.000000" cy="-25.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-200.000000" r="50.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="-200.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="355.000000" cy="-200.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="-225.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="-175.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-250.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="405.000000" cy="-250.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-275.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-225.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-150.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="405.000000" cy="-150.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-175.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-125.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="0.000000" r="50.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="0.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="355.000000" cy="0.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="-25.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="380.000000" cy="25.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-50.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="405.000000" cy="-50.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-75.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="-25.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="50.000000" r="25.000000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="405.000000" cy="50.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="25.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
-	<circle cx="430.000000" cy="75.000000" r="12.500000" stroke="black" text-anchor="middle" fill="none"/>
+	<polyline points= "-500.0,-580.0 -220.0,-580.0 -220.0,-240.0 -200.0,-200.0 -220.0,-240.0 -220.0,-540.0 -200.0,-580.0 -200.0,-860.0 -66.66666666666669,-860.0 -66.66666666666669,-880.0 66.66666666666666,-880.0 66.66666666666666,-860.0 200.0,-860.0 200.0,-580.0 220.0,-540.0 220.0,-240.0 200.0,-220.0 220.0,-240.0 220.0,-600.0 500.0,-600.0 500.0,0.0 450.0,220.0 450.0,600.0 220.0,600.0 220.0,240.0 200.0,220.0 220.0,240.0 220.0,490.0 200.0,530.0 200.0,760.0 66.66666666666666,760.0 66.66666666666666,780.0 -66.66666666666666,780.0 -66.66666666666666,760.0 -200.0,760.0 -200.0,530.0 -220.0,490.0 -220.0,240.0 -200.0,200.0 -220.0,240.0 -220.0,580.0 -450.0,580.0 -450.0,200.0 -500.0,0.0 -500.0,-580.0" fill="none" stroke="black"/>
+	<line x1="-200.0" y1="-580.0" x2="200.0" y2="-580.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="-540.0" x2="200.0" y2="-540.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="-240.0" x2="200.0" y2="-240.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="530.0" x2="200.0" y2="530.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="490.0" x2="200.0" y2="490.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="240.0" x2="200.0" y2="240.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="-200.0" x2="-500.0" y2="-200.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="200.0" x2="-450.0" y2="200.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="200.0" y1="-220.0" x2="500.0" y2="-220.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="200.0" y1="220.0" x2="450.0" y2="220.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="-200.0" y1="-200.0" x2="-200.0" y2="200.0" stroke="black" stroke-dasharray="11"/>
+	<line x1="200.0" y1="-220.0" x2="200.0" y2="220.0" stroke="black" stroke-dasharray="11"/>
+	<rect x="-66.666667" y="-200.000000" width="133.333333" height="20.000000" stroke="black" fill="none"/>
+	<rect x="-66.666667" y="180.000000" width="133.333333" height="20.000000" stroke="black" fill="none"/>
+	<text x="0" y="-260.000000" transform="rotate(180, 0, 0)"   style="fill: none; stroke: black;  font-size: 20.000000px;" text-anchor="middle">Digital Manufacturing</text>
+	<g transform="translate(62.500000 300.000000) rotate(180 0 0) scale(0.010000, -0.010000)" fill="#000000" stroke="none">
+		<path d="M1912 12640 c-332 -224 -604 -411 -605 -415 -3 -9 237 -345 244 -342
+		22 8 1209 814 1209 820 0 7 -240 348 -243 346 -1 0 -274 -184 -605 -409z"/>
+		<path d="M10093 12842 c-20 -31 -70 -109 -111 -172 l-74 -114 22 -18 c12 -10
+		275 -190 583 -400 l561 -381 22 28 c12 16 63 88 113 161 l91 132 -278 195
+		c-152 106 -416 291 -585 410 l-308 216 -36 -57z"/>
+		<path d="M3990 12859 c-143 -25 -315 -99 -545 -234 -305 -179 -1143 -699
+		-2180 -1353 l-540 -341 -361 -1084 -362 -1085 52 -5 c28 -3 544 -54 1147 -113
+		l1095 -107 355 218 c1311 808 2319 1454 2635 1692 144 107 236 232 280 378 14
+		45 18 93 18 190 0 213 -8 234 -230 569 -503 757 -763 1084 -954 1196 -125 74
+		-275 103 -410 79z"/>
+		<path d="M8364 12776 c-100 -23 -136 -49 -297 -209 -176 -175 -317 -341 -469
+		-553 -236 -330 -487 -780 -523 -939 -27 -119 -38 -259 -26 -346 19 -139 67
+		-219 201 -330 41 -34 107 -92 145 -128 171 -161 620 -458 1275 -843 905 -532
+		1575 -869 1884 -948 148 -38 185 -30 338 74 317 213 897 1042 1070 1527 l33
+		94 0 210 0 210 -33 69 c-23 49 -52 88 -100 135 -262 257 -967 735 -1983 1346
+		-490 295 -846 497 -963 548 -188 81 -412 115 -552 83z"/>
+		<path d="M6040 10005 l0 -205 -209 0 -209 0 -6 -82 c-3 -46 -7 -159 -8 -253
+		l-3 -170 218 -3 217 -2 0 -213 0 -213 -76 -49 c-112 -73 -214 -186 -269 -298
+		-97 -198 -95 -455 6 -633 15 -28 65 -93 110 -144 79 -91 81 -95 75 -134 -7
+		-46 -35 -137 -45 -148 -4 -5 -79 1 -166 12 -553 70 -934 154 -1610 355 -243
+		72 -359 101 -506 125 -792 129 -1507 -117 -1702 -585 -81 -195 -113 -482 -88
+		-795 30 -377 116 -600 432 -1125 250 -415 345 -608 432 -880 95 -295 164 -666
+		183 -982 l7 -112 26 4 c14 2 357 7 761 10 404 3 1111 10 1570 15 459 6 1472
+		17 2250 25 778 8 1596 17 1817 21 l402 6 5 62 c3 33 8 115 11 181 7 156 31
+		365 55 482 44 213 166 468 413 863 355 567 540 1189 500 1679 -20 234 -84 473
+		-178 663 -131 261 -287 387 -570 459 -105 26 -137 30 -258 30 -205 -1 -443
+		-33 -819 -111 -233 -49 -282 -61 -437 -111 -361 -117 -796 -213 -1186 -264
+		-159 -21 -435 -45 -511 -45 l-62 0 -6 33 c-3 17 -8 61 -12 98 l-6 65 49 38
+		c99 75 173 197 214 351 28 107 31 301 6 395 -47 177 -170 327 -329 403 l-67
+		32 0 228 -1 227 225 0 225 0 0 245 0 245 -210 0 -210 0 -2 203 -3 202 -222 3
+		-223 2 0 -205z m-2525 -2476 c729 -55 1303 -309 1753 -773 324 -335 504 -700
+		544 -1102 16 -171 17 -942 0 -1077 -24 -190 -104 -387 -197 -483 -87 -89 -181
+		-125 -323 -125 -198 1 -436 66 -531 147 -69 58 -120 226 -129 426 l-5 116 58
+		7 c32 4 125 4 206 1 l149 -7 0 212 0 212 -83 -6 c-98 -8 -260 6 -335 28 -94
+		28 -146 93 -190 235 -11 36 -25 99 -32 141 l-12 75 -201 12 c-111 6 -202 10
+		-204 9 -1 -2 9 -97 22 -213 14 -115 25 -212 25 -216 0 -5 -103 -8 -229 -8
+		l-228 0 -7 -92 c-3 -50 -6 -145 -6 -211 l0 -120 93 6 c141 10 371 -7 437 -32
+		108 -40 164 -112 196 -248 40 -170 -10 -295 -141 -355 -69 -30 -232 -37 -325
+		-13 -303 78 -602 377 -891 890 -170 302 -549 1158 -608 1375 -73 267 -71 449
+		9 662 82 221 326 423 605 503 147 41 279 47 580 24z m5920 6 c147 -14 342 -88
+		469 -179 122 -87 252 -245 292 -357 29 -82 54 -214 54 -289 -1 -266 -46 -424
+		-263 -920 -361 -826 -549 -1147 -836 -1430 -209 -205 -371 -289 -582 -298
+		-180 -8 -275 38 -319 156 -31 81 -25 213 12 294 31 67 98 142 150 169 49 25
+		185 38 397 39 l164 0 -6 68 c-4 37 -7 131 -7 210 l0 142 -228 0 c-126 0 -231
+		2 -233 4 -3 3 6 100 19 216 13 116 22 213 20 215 -2 2 -93 -1 -203 -8 l-199
+		-12 -17 -95 c-38 -214 -92 -307 -201 -348 -71 -27 -246 -44 -350 -36 l-78 7 0
+		-211 0 -210 188 2 c103 0 194 -2 202 -5 13 -5 14 -26 9 -130 -7 -129 -36 -274
+		-70 -340 -25 -49 -91 -107 -158 -136 -121 -54 -373 -94 -505 -81 -238 23 -412
+		272 -446 638 -15 157 -15 808 0 995 19 246 63 410 165 620 237 488 749 935
+		1290 1129 290 103 632 168 975 185 153 7 179 7 295 -4z"/>
+		<path d="M3935 9075 c-314 -207 -574 -382 -579 -389 -15 -22 67 -139 164 -237
+		246 -244 704 -462 1322 -628 186 -49 442 -105 457 -99 4 2 -37 89 -92 193
+		-266 506 -578 1195 -672 1483 -9 28 -20 52 -23 52 -4 0 -264 -169 -577 -375z"/>
+		<path d="M7961 9298 c-29 -127 -108 -374 -162 -505 -130 -314 -342 -673 -564
+		-958 -47 -60 -81 -111 -76 -113 17 -6 325 57 513 104 508 128 916 303 1199
+		516 97 74 246 229 281 294 l27 50 -587 355 c-322 195 -591 355 -597 357 -6 1
+		-21 -41 -34 -100z"/>
+		<path d="M2833 2953 c4 -38 7 -166 7 -285 l0 -218 3415 0 3415 0 0 285 0 285
+		-3421 0 -3422 0 6 -67z"/>
+		<path d="M3125 1550 c-259 -347 -470 -635 -470 -641 0 -6 54 -46 120 -88 519
+		-333 1194 -761 1207 -766 19 -8 43 23 125 160 147 244 419 761 779 1478 l244
+		487 -768 0 -768 0 -469 -630z"/>
+		<path d="M7398 2148 c101 -168 417 -783 787 -1531 154 -312 283 -567 287 -567
+		3 0 267 167 585 372 318 204 608 391 645 414 l68 44 -114 172 c-128 194 -407
+		658 -566 940 l-105 187 -803 1 -804 0 20 -32z"/>
+	</g>
+	<circle cx="370.000000" cy="-60.000000" r="75.000000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-60.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="257.500000" cy="-60.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="238.750000" cy="-60.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="257.500000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="257.500000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-97.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="276.250000" cy="-97.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-22.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="276.250000" cy="-22.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="295.000000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-135.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="-135.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="313.750000" cy="-135.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="-153.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-172.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="351.250000" cy="-172.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-191.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-153.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-97.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="351.250000" cy="-97.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="15.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="15.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="313.750000" cy="15.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="332.500000" cy="33.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-22.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="351.250000" cy="-22.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="52.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="351.250000" cy="52.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="33.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="370.000000" cy="71.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-60.000000" r="75.000000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-60.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="-257.500000" cy="-60.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-238.750000" cy="-60.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-257.500000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-257.500000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-97.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-276.250000" cy="-97.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-22.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-276.250000" cy="-22.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-295.000000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-135.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="-135.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-313.750000" cy="-135.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="-153.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-172.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-351.250000" cy="-172.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-191.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-153.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-97.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-351.250000" cy="-97.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-116.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-78.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="15.000000" r="37.500000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="15.000000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-313.750000" cy="15.000000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-332.500000" cy="33.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-22.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-351.250000" cy="-22.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-41.250000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="-3.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="52.500000" r="18.750000" stroke="black" fill="none"/>
+	<circle cx="-351.250000" cy="52.500000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="33.750000" r="9.375000" stroke="black" fill="none"/>
+	<circle cx="-370.000000" cy="71.250000" r="9.375000" stroke="black" fill="none"/>
 </svg>

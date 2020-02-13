@@ -7,10 +7,10 @@ def main():
     DIM_LIMIT = 5
     THIK_LIMIT = 0.1
 
-    t = 0.3
-    l = 6
+    t = 0.2
+    l = 4
     w = 4
-    h = 4
+    h = 3
     h3 = 2
     h2 = 0.5
     h1 = h - h2
@@ -202,36 +202,65 @@ def main():
     ####################################################################################################
     # draw the logo
     if w > h1:
-        logo_size = 1/2*h1
+        logo_size = 1/2.0*h1
     else:
-        logo_size = 1/2*w
+        logo_size = 1/2.0*w
     
-    logo_xloc = -1/2*logo_size
-    logo_yloc = Text_loc - logo_size - Text_size
+    logo_yloc = Text_loc - 2*t
 
-    url = "logo.svg"
-    Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc, logo_yloc, logo_size, logo_size))
+    # url = "logo.svg"
+    # Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%f\"/>\n" % (url, logo_xloc, logo_yloc, logo_size, logo_size))
+
+    with open("logo.svg", "r") as Logofile:
+
+        Boxfile.write("\t<g transform=\"translate(%f %f) rotate(180 0 0) scale(%f, %f)\" fill=\"#000000\" stroke=\"none\">\n" % (1/2.0*logo_size, -logo_yloc, logo_size*0.00008, -logo_size*0.00008))
+
+        copy_flag = False
+
+        for line in Logofile:
+
+            if line[:5] == "<path":
+                copy_flag = True
+
+            if line[:4] == "</g>":
+                copy_flag = False
+
+            if copy_flag == True:
+                Boxfile.write("\t\t" + line)
+
+        Boxfile.write("\t</g>\n")
 
 
     ####################################################################################################
     # draw the fractal pattern
-    drawCircle(w/2+h/2+t, -h/4, h/4)
+    drawCircle(w/2+h/2+t, -h/5, h/4, "r")
+    drawCircle(-(w/2+h/2+t), -h/5, h/4, "l")
 
     ####################################################################################################
-    # how to draw the curves
+    # draw the fractal tree
+
 
 
 
 # fractal function
-def drawCircle(x, y, d):
+def drawCircle(x, y, d, f):
 
-    Boxfile.write("\t<circle cx=\"%f\" cy=\"%f\" r=\"%f\" stroke=\"black\" text-anchor=\"middle\" fill=\"none\"/>\n" %(x, y, d))
+    Boxfile.write("\t<circle cx=\"%f\" cy=\"%f\" r=\"%f\" stroke=\"black\" fill=\"none\"/>\n" %(x, y, d))
 
-    if d > 15:
-        drawCircle(x-d, y, d/2)
-        drawCircle(x, y-d, d/2)
-        drawCircle(x, y+d, d/2)
+    if d > 15 and f == "r":
+        drawCircle(x-d, y, d/2, "r")
+        drawCircle(x, y-d, d/2, "r")
+        drawCircle(x, y+d, d/2, "r")
 
+    elif d > 15 and f == "l":
+        drawCircle(x+d, y, d/2, "l")
+        drawCircle(x, y-d, d/2, "l")
+        drawCircle(x, y+d, d/2, "l")
+
+
+# fractal tree function
+def fracTree():
+    pass
 
 
 ####################################################################################################
@@ -252,4 +281,4 @@ if __name__ == "__main__":
         # close up the file
         Boxfile.write("</svg>")
 
-    print("File generated successfully! Check your root folder :)")
+    print("\nFile generated successfully! Check your root folder :)")
