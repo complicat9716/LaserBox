@@ -8,8 +8,8 @@ def main():
     THIK_LIMIT = 0.1
 
     t = 0.3
-    l = 3
-    w = 5
+    l = 6
+    w = 4
     h = 3
     h3 = 2
     h2 = 1
@@ -212,8 +212,26 @@ def main():
     url = "logo.svg"
     Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc, logo_yloc, logo_size, logo_size))
 
+
+    ####################################################################################################
+    # draw the fractal pattern
+    drawCircle(w/2+h/2+t, -h/3, h/4)
+
     ####################################################################################################
     # how to draw the curves
+
+
+
+# fractal function
+def drawCircle(x, y, d):
+
+    Boxfile.write("\t<circle cx=\"%f\" cy=\"%f\" r=\"%f\" stroke=\"black\" text-anchor=\"middle\" fill=\"none\"/>\n" %(x, y, d))
+
+    if d > 15:
+        drawCircle(x-d, y, d/2)
+        drawCircle(x, y-d, d/2)
+        drawCircle(x, y+d, d/2)
+
 
 
 ####################################################################################################
