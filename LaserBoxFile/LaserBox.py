@@ -8,8 +8,8 @@ def main():
     THIK_LIMIT = 0.1
 
     t = 0.2
-    l = 4
-    w = 4
+    l = 4.5
+    w = 3
     h = 3
     h3 = 2
     h2 = 0.5
@@ -237,8 +237,14 @@ def main():
     drawCircle(-(w/2+h/2+t), -h/5, h/4, "l")
 
     ####################################################################################################
-    # draw the fractal tree
+    # draw the fractal tree branch
+    Boxfile.write("\t<g id=\"branch\"> <line x1=\"0\" y1=\"%f\" x2=\"0\" y2=\"%f\" stroke=\"black\"/> </g>\n" % (0, - 60))
 
+    Boxfile.write("\t<g id=\"%f\"><use xlink:href=\"#branch\"/></g>\n" % 0)
+
+    for i in range(1,5):
+        
+        Boxfile.write("\t<g id=\"%f\"> <use xlink:href=\"#%f\" transform=\"translate(0, -60) rotate(-35) scale(.7)\"/> <use xlink:href=\"#%f\" transform=\"translate(0, -30) rotate(+35) scale(.7)\"/> <use xlink:href=\"#branch\"/></g>\n" % (i, i-1, i-1))
 
 
 
@@ -258,9 +264,8 @@ def drawCircle(x, y, d, f):
         drawCircle(x, y+d, d/2, "l")
 
 
-# fractal tree function
-def fracTree():
-    pass
+
+
 
 
 ####################################################################################################
