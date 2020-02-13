@@ -7,20 +7,21 @@ def main():
     DIM_LIMIT = 5
     THIK_LIMIT = 0.1
 
-    t = 10
-    l = 240
-    w = 240
-    h = 140
-    h3 = 120
-    h2 = 30
+    t = 0.3
+    l = 3
+    w = 5
+    h = 3
+    h3 = 2
+    h2 = 1
     h1 = h - h2
 
-    # t = 0
-    # l = 0
-    # w = 0
-    # h = 0
-    # h3 = 0
-    # h2 = 0
+    t = t*100
+    l = l*100
+    w = w*100
+    h = h*100
+    h3 = h3*100
+    h2 = h2*100
+    h1 = h1*100
 
     # ####################################################################################################
     # # print the user instruction
@@ -80,30 +81,50 @@ def main():
     poly_points = ""
 
     points_List.append("{},{}".format(-w / 2 - h, -l / 2 - (w - t)))
-    points_List.append("{},{}".format(-w / 2, -l / 2 - (w - t)))
+    points_List.append("{},{}".format(-w / 2 - t, -l / 2 - (w - t)))
+    points_List.append("{},{}".format(-w / 2 - t, -l / 2 - 2*t))
     points_List.append("{},{}".format(-w / 2, -l / 2))
+    points_List.append("{},{}".format(-w / 2 - t, -l / 2 - 2*t))
+    points_List.append("{},{}".format(-w / 2-t, -l / 2 - 2*t - h))
+    points_List.append("{},{}".format(-w / 2, -l / 2 - 2*t - h - 2*t))
+    
     points_List.append("{},{}".format(-w / 2, -l / 2 - 2 * t - h - 2 * t - (h - t)))
     points_List.append("{},{}".format(-w / 2 + (1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t)))
     points_List.append("{},{}".format(-w / 2 + (1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t) - t))
     points_List.append("{},{}".format(1/2*(1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t) - t))
     points_List.append("{},{}".format(1/2*(1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t)))
     points_List.append("{},{}".format(w/2, -l / 2 - 2 * t - h - 2 * t - (h - t)))
+    points_List.append("{},{}".format(w/2, -l / 2 - 2 * t - h - 2 * t))
+    points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t - h))
+    points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t))
+    
     points_List.append("{},{}".format(w/2, -l / 2 - t))
-    points_List.append("{},{}".format(w/2, -l / 2 - t - (w-t)))
+    points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t))
+    points_List.append("{},{}".format(w/2 + t, -l / 2 - t - (w-t)))
     points_List.append("{},{}".format(w/2 + h, -l / 2 - t - (w-t)))
     points_List.append("{},{}".format(w/2 + h, l/2 - h3))
     points_List.append("{},{}".format(w/2 + h - h2, l/2 + t))
     points_List.append("{},{}".format(w/2 + h - h2, l/2 + t + (w-t)))
-    points_List.append("{},{}".format(w/2, l/2 + t + (w-t)))
+    points_List.append("{},{}".format(w/2 + t, l/2 + t + (w-t)))
+    points_List.append("{},{}".format(w/2 + t, l/2 + 2*t))
     points_List.append("{},{}".format(w/2, l/2 + t))
+    points_List.append("{},{}".format(w/2 + t, l/2 + 2*t))
+    points_List.append("{},{}".format(w/2 + t, l/2 + 2*t + h1))
+    points_List.append("{},{}".format(w/2, l/2 + 2*t + h1 + 2*t))
+
     points_List.append("{},{}".format(w/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
     points_List.append("{},{}".format((1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
     points_List.append("{},{}".format((1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t) + t))
     points_List.append("{},{}".format(-(1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t) + t))
     points_List.append("{},{}".format(-(1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
     points_List.append("{},{}".format(-w/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
+    points_List.append("{},{}".format(-w/2, l/2 + 2*t + h1 + 2*t))
+    points_List.append("{},{}".format(-w/2-t, l/2 + 2*t + h1))
+    points_List.append("{},{}".format(-w/2-t, l/2 + 2*t))
     points_List.append("{},{}".format(-w/2, l/2))
-    points_List.append("{},{}".format(-w/2, l/2 + (w-t)))
+    points_List.append("{},{}".format(-w/2-t, l/2 + 2*t))
+
+    points_List.append("{},{}".format(-w/2 - t, l/2 + (w-t)))
     points_List.append("{},{}".format(-w/2 - h1, l/2 + (w-t)))
     points_List.append("{},{}".format(-w/2 - h1, l/2))
     points_List.append("{},{}".format(-w/2 - h, l/2 - h3))
@@ -151,21 +172,45 @@ def main():
 
 
     ####################################################################################################
-    # draw the text (take out the text location)
+    # draw the text
     UserText = "Digital Manufacturing"
-    Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: 13px;\" text-anchor=\"middle\">%s</text>\n" % (-l/2-30, UserText))
+    Text_size = t
+    Text_loc = -l/2-3*Text_size
+    Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc, Text_size, UserText))
+
+    # # User defined text
+    # UserText_flag = input("Do you want to custome some text on the top of the box? (y/n): ")
+
+    # if UserText_flag == 'y' or UserText_flag == 'Y':
+    #     UserText = input("Please type your custom text: ")
+    #     Text_loc_top = l/2 + 2*t + h + 2*t + 50
+    #     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_top, Text_size, UserText))
+    # else:
+    #     pass
+
+    # # User defined text
+    # UserText_flag = input("Do you want to custome some text on the front of the box? (y/n): ")
+
+    # if UserText_flag == 'y' or UserText_flag == 'Y':
+    #     UserText = input("Please type your custom text: ")
+    #     Text_loc_front = -l/2 - h1 + 10
+    #     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_front, Text_size, UserText))
+    # else:
+    #     pass
+
 
     ####################################################################################################
-    # draw the logo (draw the logo based on the txt location)(How to draw the image (logo))
+    # draw the logo
     if w > h1:
         logo_size = 1/2*h1
     else:
         logo_size = 1/2*w
     
     logo_xloc = -1/2*logo_size
+    logo_yloc = Text_loc - logo_size - Text_size
 
     url = "logo.svg"
-    Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc,-(l/2 + 2*t + 4/5*h1), logo_size, logo_size))
+    Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%F\"/>\n" % (url, logo_xloc, logo_yloc, logo_size, logo_size))
 
     ####################################################################################################
     # how to draw the curves
