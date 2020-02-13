@@ -7,7 +7,7 @@ def main():
     DIM_LIMIT = 5
     THIK_LIMIT = 0.1
 
-    t = 0.2
+    t = 0.25
     l = 4.5
     w = 3
     h = 3
@@ -178,25 +178,25 @@ def main():
     Text_loc = -l/2-3*Text_size
     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc, Text_size, UserText))
 
-    # # User defined text
-    # UserText_flag = input("Do you want to custome some text on the top of the box? (y/n): ")
+    # User defined text
+    UserText_flag = input("Do you want to custome some text on the top of the box? (y/n): ")
 
-    # if UserText_flag == 'y' or UserText_flag == 'Y':
-    #     UserText = input("Please type your custom text: ")
-    #     Text_loc_top = l/2 + 2*t + h + 2*t + 50
-    #     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_top, Text_size, UserText))
-    # else:
-    #     pass
+    if UserText_flag == 'y' or UserText_flag == 'Y':
+        UserText = input("Please type your custom text: ")
+        Text_loc_top = l/2 + 2*t + h + 2*t + 50
+        Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_top, Text_size, UserText))
+    else:
+        pass
 
-    # # User defined text
-    # UserText_flag = input("Do you want to custome some text on the front of the box? (y/n): ")
+    # User defined text
+    UserText_flag = input("Do you want to custome some text on the front of the box? (y/n): ")
 
-    # if UserText_flag == 'y' or UserText_flag == 'Y':
-    #     UserText = input("Please type your custom text: ")
-    #     Text_loc_front = -l/2 - h1 + 10
-    #     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_front, Text_size, UserText))
-    # else:
-    #     pass
+    if UserText_flag == 'y' or UserText_flag == 'Y':
+        UserText = input("Please type your custom text: ")
+        Text_loc_front = -l/2 - h1 + 5
+        Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_front, Text_size, UserText))
+    else:
+        pass
 
 
     ####################################################################################################
@@ -236,15 +236,18 @@ def main():
     drawCircle(w/2+h/2+t, -h/5, h/4, "r")
     drawCircle(-(w/2+h/2+t), -h/5, h/4, "l")
 
-    ####################################################################################################
-    # draw the fractal tree branch
-    Boxfile.write("\t<g id=\"branch\"> <line x1=\"0\" y1=\"%f\" x2=\"0\" y2=\"%f\" stroke=\"black\"/> </g>\n" % (0, - 60))
+    # ####################################################################################################
+    # # draw the fractal tree branch
+    # root_loc = -l/2 - 6*t
+    # root_len = 80
 
-    Boxfile.write("\t<g id=\"%f\"><use xlink:href=\"#branch\"/></g>\n" % 0)
+    # Boxfile.write("\t<g id=\"branch\"> <line x1=\"0\" y1=\"%f\" x2=\"0\" y2=\"%f\" stroke=\"black\"/> </g>\n" % (root_loc, root_loc - root_len))
 
-    for i in range(1,5):
+    # Boxfile.write("\t<g id=\"%f\"><use xlink:href=\"#branch\"/></g>\n" % 0)
+
+    # for i in range(1,5):
         
-        Boxfile.write("\t<g id=\"%f\"> <use xlink:href=\"#%f\" transform=\"translate(0, -60) rotate(-35) scale(.7)\"/> <use xlink:href=\"#%f\" transform=\"translate(0, -30) rotate(+35) scale(.7)\"/> <use xlink:href=\"#branch\"/></g>\n" % (i, i-1, i-1))
+    #     Boxfile.write("\t<g id=\"%f\"> <use xlink:href=\"#%f\" transform=\"translate(140, -225) rotate(-35) scale(.7)\"/> <use xlink:href=\"#%f\" transform=\"translate(-140, -155) rotate(+35) scale(.7)\"/> <use xlink:href=\"#branch\"/></g>\n" % (i, i-1, i-1))
 
 
 
