@@ -5,14 +5,14 @@ def main():
     ####################################################################################################
     # constant limits for later use
     DIM_LIMIT = 5
-    THIK_LIMIT = 0.1
+    THIK_LIMIT = 0.01
 
-    t = 0.2
-    l = 4.5
-    w = 3
-    h = 3
-    h3 = 2
-    h2 = 0.5
+    t = 0.09
+    l = 6
+    w = 4
+    h = 4
+    h3 = 0
+    h2 = 0
     h1 = h - h2
 
     t = t*100
@@ -22,6 +22,13 @@ def main():
     h3 = h3*100
     h2 = h2*100
     h1 = h1*100
+
+    Thickness_measure = 3.0
+
+    thickness_to_pattern_r = t/(w+2*h)
+    print("\nThe Pattern width to thickness ratio is: %f" % (thickness_to_pattern_r))
+    print("Adjust the width of the whole pattern to %f mm" % (Thickness_measure/thickness_to_pattern_r))
+    print("Adjust the width of the whole pattern to %f in\n" % ((Thickness_measure/thickness_to_pattern_r)/25.4))
 
     # ####################################################################################################
     # # print the user instruction
@@ -174,8 +181,8 @@ def main():
     ####################################################################################################
     # draw the text
     UserText = "Digital Manufacturing"
-    Text_size = t
-    Text_loc = -l/2-3*Text_size
+    Text_size = 2*t
+    Text_loc = -l/2-2*Text_size
     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc, Text_size, UserText))
 
     # User defined text
@@ -208,7 +215,7 @@ def main():
     else:
         logo_size = 1/2.0*w
     
-    logo_yloc = Text_loc - t
+    logo_yloc = Text_loc - 2*t
 
     # url = "logo.svg"
     # Boxfile.write("\t<image href=\"%s\" x=\"%f\" y=\"%f\" transform=\"rotate(180 0 0)\" height=\"%f\" width=\"%f\"/>\n" % (url, logo_xloc, logo_yloc, logo_size, logo_size))
@@ -277,7 +284,7 @@ def drawCircle(x, y, d, f):
 # set the program as main and write file
 if __name__ == "__main__":
 
-    with open("LaserBox.svg", "w") as Boxfile:
+    with open("LaserBox1.svg", "w") as Boxfile:
 
         # write the svg definition
         Boxfile.write("<svg viewBox=\"-1000 -1000 2000 2000\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n")
@@ -292,3 +299,5 @@ if __name__ == "__main__":
         Boxfile.write("</svg>")
 
     print("\nFile generated successfully! Check your root folder :)")
+
+    
