@@ -4,16 +4,85 @@
 def main():
     ####################################################################################################
     # constant limits for later use
-    DIM_LIMIT = 5
-    THIK_LIMIT = 0.01
+    DIM_LIMIT = 1
+    THIK_LIMIT = 0.00001
 
-    t = 0.09
-    l = 6
-    w = 4
-    h = 4
+    t = 0
+    l = 0
+    w = 0
+    h = 0
     h3 = 0
     h2 = 0
-    h1 = h - h2
+
+
+    Thickness_measure = 3.0
+
+    ####################################################################################################
+    # print the user instruction
+    print("Welcome to the Box generator!")
+    print("Please follow the instruction to generate a Box shape. :) Have Fun!")
+    print("#########################################")
+    print("The card borad need to be at least >= 0\" in thickness.")
+    print("The Box needs to be at least 2\" in all dimensions.")
+    print("#########################################")
+
+    ####################################################################################################
+    # validate the user input
+    while True:
+        try:
+            # get the user input
+            if t < THIK_LIMIT:
+                t = float(input('Enter the thickness of the card borad: '))
+
+            if l < DIM_LIMIT:
+                l = float(input('Enter the length of the Box: '))
+
+            if w < DIM_LIMIT:
+                w = float(input('Enter the width of the Box: '))
+
+            if h < DIM_LIMIT:
+                h = float(input('Enter the height of the Box: '))
+
+
+            slanted = input("\nDo you want to do a slanted box? (y/n): ")
+
+            if slanted == "y" or slanted == "Y":
+
+                if h3 > l or h3 <= 0:
+                    h3 = float(input('Enter the top chamfer length of the Box: '))
+
+                if h2 > h or h2 <= 0:
+                    h2 = float(input('Enter the front chamfer length of the Box: '))
+            else:
+                
+                h3 = 0
+                h2 = 0
+              
+        except ValueError:
+            print("Sorry, The parameters seems not right. Please enter valid numbers.")
+            continue
+
+        else:
+            if l < DIM_LIMIT or w < DIM_LIMIT or h < DIM_LIMIT or t < THIK_LIMIT or h3 < 0 or h2 < 0:
+                print("#########################################")
+                print("The following numbers were too small. Try again.")
+                
+                continue
+
+            if h2 > h or h3 > l:
+                print("#########################################")
+                print("Chamfer too big. Try again.")
+                
+                h3 = 0
+                h2 = 0
+
+                continue
+            else:
+                print("\nInput Successs!")
+                print("#########################################")
+
+                break
+
 
     t = t*100
     l = l*100
@@ -21,66 +90,11 @@ def main():
     h = h*100
     h3 = h3*100
     h2 = h2*100
-    h1 = h1*100
-
-    Thickness_measure = 3.0
-
+    h1 = h - h2
+    
     thickness_to_pattern_r = t/(w+2*h)
-    print("\nThe Pattern width to thickness ratio is: %f" % (thickness_to_pattern_r))
-    print("Adjust the width of the whole pattern to %f mm" % (Thickness_measure/thickness_to_pattern_r))
-    print("Adjust the width of the whole pattern to %f in\n" % ((Thickness_measure/thickness_to_pattern_r)/25.4))
-
-    # ####################################################################################################
-    # # print the user instruction
-    # print("Welcome to the Square generator!")
-    # print("Please follow the instruction to generate a Box shape. :) Have Fun!")
-    # print("#########################################")
-    # print("The card borad need to be at least 0.1\" in thickness.")
-    # print("The Box needs to be at least 2\" in all dimensions.")
-    # print("#########################################")
-
-    # ####################################################################################################
-    # # validate the user input
-    # while True:
-    #     try:
-    #         # get the user input
-    #         if t < THIK_LIMIT:
-    #             t = float(input('Enter the thickness of the card borad: '))
-
-    #         if l < DIM_LIMIT:
-    #             l = float(input('Enter the length of the Box: '))
-
-    #         if w < DIM_LIMIT:
-    #             w = float(input('Enter the width of the Box: '))
-
-    #         if h < DIM_LIMIT:
-    #             h = float(input('Enter the height of the Box: '))
-
-    #         if h3 > l or h3 < DIM_LIMIT:
-    #             h3 = float(input('Enter the top chamfer length of the Box: '))
-
-    #         if h2 > h or h2 < DIM_LIMIT:
-    #             h2 = float(input('Enter the front chamfer length of the Box: '))
-
-    #         h1 = h - h2
-
-    #     except ValueError:
-    #         print("Sorry, The parameters seems not right. Please enter valid numbers.")
-    #         continue
-
-    #     else:
-    #         if l < DIM_LIMIT or w < DIM_LIMIT or h < DIM_LIMIT or t < THIK_LIMIT or h3 < DIM_LIMIT or h2 < DIM_LIMIT:
-    #             print("The following numbers were too small. Try again.")
-    #             print("#########################################")
-    #             continue
-    #         if h2 > h or h3 > l:
-    #             print("Chamfer too big. Try again.")
-    #             print("#########################################")
-    #             continue
-    #         else:
-    #             print("Input Successs!")
-    #             print("#########################################")
-    #             break
+    print("Adjust the width of the whole pattern to %f mm on laser cutter" % (Thickness_measure/thickness_to_pattern_r))
+    print("Adjust the width of the whole pattern to %f in ob laser cutter\n" % ((Thickness_measure/thickness_to_pattern_r)/25.4))
 
     ####################################################################################################
     # draw the box pattern
@@ -94,7 +108,6 @@ def main():
     points_List.append("{},{}".format(-w / 2 - t, -l / 2 - 2*t))
     points_List.append("{},{}".format(-w / 2-t, -l / 2 - 2*t - h))
     points_List.append("{},{}".format(-w / 2, -l / 2 - 2*t - h - 2*t))
-    
     points_List.append("{},{}".format(-w / 2, -l / 2 - 2 * t - h - 2 * t - (h - t)))
     points_List.append("{},{}".format(-w / 2 + (1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t)))
     points_List.append("{},{}".format(-w / 2 + (1/3)*w, -l / 2 - 2 * t - h - 2 * t - (h - t) - t))
@@ -104,7 +117,6 @@ def main():
     points_List.append("{},{}".format(w/2, -l / 2 - 2 * t - h - 2 * t))
     points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t - h))
     points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t))
-    
     points_List.append("{},{}".format(w/2, -l / 2 - t))
     points_List.append("{},{}".format(w/2 + t, -l / 2 - 2 * t))
     points_List.append("{},{}".format(w/2 + t, -l / 2 - t - (w-t)))
@@ -118,7 +130,6 @@ def main():
     points_List.append("{},{}".format(w/2 + t, l/2 + 2*t))
     points_List.append("{},{}".format(w/2 + t, l/2 + 2*t + h1))
     points_List.append("{},{}".format(w/2, l/2 + 2*t + h1 + 2*t))
-
     points_List.append("{},{}".format(w/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
     points_List.append("{},{}".format((1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t)))
     points_List.append("{},{}".format((1/3*w)/2, l/2 + 2*t + h1 + 2*t + (h1-t) + t))
@@ -130,7 +141,6 @@ def main():
     points_List.append("{},{}".format(-w/2-t, l/2 + 2*t))
     points_List.append("{},{}".format(-w/2, l/2))
     points_List.append("{},{}".format(-w/2-t, l/2 + 2*t))
-
     points_List.append("{},{}".format(-w/2 - t, l/2 + (w-t)))
     points_List.append("{},{}".format(-w/2 - h1, l/2 + (w-t)))
     points_List.append("{},{}".format(-w/2 - h1, l/2))
@@ -186,22 +196,22 @@ def main():
     Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc, Text_size, UserText))
 
     # User defined text
-    UserText_flag = input("Do you want to custome some text on the top of the box? (y/n): ")
+    UserText_flag = input("Do you want to custom some text on the top of the box? (y/n): ")
 
     if UserText_flag == 'y' or UserText_flag == 'Y':
-        # UserText = input("Please type your custom text: ")
-        UserText = ("Yachao Liu (yl4269)")
+        UserText = input("Please type your custom text: ")
+        # UserText = ("Yachao Liu (yl4269)")
         Text_loc_top = l/2 + 2*t + h + 2*t + 50
         Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_top, Text_size, UserText))
     else:
         pass
 
     # User defined text
-    UserText_flag = input("Do you want to custome some text on the front of the box? (y/n): ")
+    UserText_flag = input("Do you want to custom some text on the front of the box? (y/n): ")
 
     if UserText_flag == 'y' or UserText_flag == 'Y':
-        # UserText = input("Please type your custom text: ")
-        UserText = ("Chong Liu (cl3896)")
+        UserText = input("Please type your custom text: ")
+        # UserText = ("Chong Liu (cl3896)")
         Text_loc_front = -l/2 - h1 - 2*t + Text_size + 10
         Boxfile.write("\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n" % (Text_loc_front, Text_size, UserText))
     else:
