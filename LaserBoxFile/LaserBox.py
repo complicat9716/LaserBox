@@ -269,8 +269,8 @@ def main():
         "Do you want to custom some text on the top of the box? (y/n): ")
 
     if UserText_flag == 'y' or UserText_flag == 'Y':
-        # UserText = input("Please type your custom text: ")
-        UserText = ("Yachao Liu (yl4269)")
+        UserText = input("Please type your custom text: ")
+        # UserText = ("Yachao Liu (yl4269)")
         Text_loc_top = l / 2 + 2 * t + h + 2 * t + 50
         Boxfile.write(
             "\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n"
@@ -283,8 +283,8 @@ def main():
         "Do you want to custom some text on the front of the box? (y/n): ")
 
     if UserText_flag == 'y' or UserText_flag == 'Y':
-        # UserText = input("Please type your custom text: ")
-        UserText = ("Chong Liu (cl3896)")
+        UserText = input("Please type your custom text: ")
+        # UserText = ("Chong Liu (cl3896)")
         Text_loc_front = -l / 2 - h1 - 2 * t + Text_size + 10
         Boxfile.write(
             "\t<text x=\"0\" y=\"%f\" transform=\"rotate(180, 0, 0)\"   style=\"fill: none; stroke: black;  font-size: %fpx;\" text-anchor=\"middle\">%s</text>\n"
